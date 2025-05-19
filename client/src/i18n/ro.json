@@ -1,0 +1,212 @@
+{
+  "welcome": "Bine ai venit la Teren",
+  "find_games": "Caută Meciuri",
+  "create_game": "Creează un Meci",
+  "join_game": "Participă",
+  "venues": "Terenuri",
+  "login": "Autentificare",
+  "register": "Înregistrare",
+  "logout": "Deconectare",
+  "language": "Limbă",
+  "admin": "Administrare Teren",
+  "home": "Acasă",
+  "games": "Meciuri",
+  "create": "Creează",
+  "profile": {
+    "joined_games": "Meciuri la care participi",
+    "no_joined_games": "Nu participi la niciun meci încă.",
+    "loading_games": "Se încarcă meciurile...",
+    "error_fetch_games": "Nu s-au putut încărca meciurile",
+    "error_loading_games": "Eroare la încărcarea meciurilor: {{error}}",
+    "error": "Eroare",
+    "login_required": "Autentificarea este necesară pentru a vizualiza profilul."
+  },
+  "management": "Administrare",
+  "hero": {
+    "title": "Joacă fotbal, găsește meciuri, creează echipe!",
+    "subtitle": "Descoperă meciuri de fotbal aproape de tine în Craiova. Alătură-te sau creează propriul tău meci!"
+  },
+  "how_it_works": {
+    "title": "Cum funcționează?",
+    "step1": {
+      "title": "Găsește meciuri",
+      "description": "Vezi o listă cu meciurile disponibile în zona ta. Filtrează după dată, locație sau nivel de skill."
+    },
+    "step2": {
+      "title": "Alătură-te sau Creează",
+      "description": "Alătură-te unui meci existent sau creează propriul tău eveniment și invită jucători."
+    },
+    "step3": {
+      "title": "Joacă!",
+      "description": "Prezintă-te la teren la data și ora stabilită și bucură-te de joc."
+    }
+  },
+  "auth": {
+    "login": "Autentificare",
+    "signup": "Înregistrare",
+    "email": "Email",
+    "password": "Parolă",
+    "name": "Nume",
+    "username": "Nume de utilizator",
+    "city": "Oraș",
+    "login_success": "Autentificare reușită!",
+    "signup_success": "Cont creat cu succes!",
+    "sign_up": "Înregistrare",
+    "dont_have_account": "Nu ai un cont?"
+  },
+  "game": {
+    "create": {
+      "title": "Creează Meci",
+      "success": "Meci creat cu succes!",
+      "success_message": "Meciul tău a fost adăugat. Îl poți vedea în lista de meciuri.",
+      "view_games": "Vezi meciuri"
+    },
+    "edit": {
+      "title": "Editează Meci",
+      "success": "Meci actualizat cu succes!",
+      "permission_error": "Nu ai permisiunea de a edita acest meci.",
+      "error": "Nu s-a putut actualiza meciul",
+      "saving": "Se salvează...",
+      "save_changes": "Salvează Modificările"
+    },
+    "details": {
+      "join": "Participă",
+      "leave": "Părăsește",
+      "login_to_join": "Autentifică-te pentru a te alătura",
+      "map_placeholder": "Harta terenului va apărea aici.",
+      "not_found": "Meciul nu a fost găsit",
+      "back_to_games": "Înapoi la Meciuri",
+      "processing": "Se procesează...",
+      "joined": "Te-ai alăturat cu succes meciului!",
+      "left": "Ai părăsit cu succes meciul!",
+      "deleted": "Meciul a fost șters cu succes!",
+      "delete_confirmation": "Ești sigur că vrei să ștergi acest meci?",
+      "error": "Eroare",
+      "players": "Jucători",
+      "no_players": "Niciun jucător nu s-a alăturat încă",
+      "edit_game": "Editează Meciul",
+      "delete_game": "Șterge Meciul",
+      "comments_title": "Comentarii",
+      "write_a_comment": "Scrie un comentariu...",
+      "post_comment": "Postează",
+      "posting": "Se postează...",
+      "no_comments": "Nu sunt comentarii încă.",
+      "error_fetch_comments": "Nu s-au putut încărca comentariile",
+      "join_to_comment": "Alătură-te meciului pentru a lăsa un comentariu."
+    },
+    "form": {
+      "date": "Data",
+      "start_time": "Ora de început",
+      "end_time": "Ora de sfârșit",
+      "max_players": "Număr maxim de jucători",
+      "pre_filled_players": "Jucători fără cont",
+      "pre_filled_players_help": "Numărul de jucători care vor participa dar nu au cont",
+      "skill_level": "Nivel",
+      "select_skill": "Selectează nivelul",
+      "select_venue": "Selectează un teren",
+      "notes": "Observații (opțional)"
+    }
+  },
+  "venue": {
+    "management": {
+      "title": "Administrare Teren",
+      "add": "Adaugă Teren Nou",
+      "edit": "Editează Teren",
+      "name": "Nume",
+      "address": "Adresă",
+      "location": "Locație",
+      "description": "Descriere",
+      "latitude": "Latitudine",
+      "longitude": "Longitudine",
+      "phone": "Telefon",
+      "email": "Email",
+      "website": "Website",
+      "surface_type": "Tip Suprafață",
+      "select_surface": "Selectează tipul de suprafață",
+      "required_field": "Acest câmp este obligatoriu",
+      "price": "Preț pe oră",
+      "currency": "Monedă",
+      "surface": {
+        "grass": "Iarbă",
+        "artificial": "Iarbă Artificială",
+        "concrete": "Beton"
+      },
+      "size": "Dimensiune",
+      "select_size": "Selectează dimensiunea",
+      "size_options": {
+        "full": "Dimensiune Completă",
+        "half": "Jumătate de Teren"
+      },
+      "facilities": "Facilități",
+      "facility": {
+        "parking": "Parcare",
+        "showers": "Dusuri",
+        "changing_rooms": "Vestiar",
+        "lights": "Iluminat",
+        "seating": "Locuri de ședere"
+      },
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "loading": "Se încarcă...",
+      "error": "Eroare",
+      "error_fetch": "Nu s-au putut încărca terenurile",
+      "error_save": "Nu s-a putut salva terenul",
+      "error_delete": "Nu s-a putut șterge terenul",
+      "update_success": "Teren actualizat!",
+      "add_success": "Teren adăugat!",
+      "delete_success": "Teren șters!",
+      "delete_confirmation": "Ești sigur că vrei să ștergi acest teren?"
+    },
+    "booking": {
+      "book": "Rezervă",
+      "edit": "Editează Rezervarea",
+      "duration": "Durată (minute)",
+      "hour": "oră",
+      "hours": "ore",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "booked": "Rezervat",
+      "external": "Extern",
+      "delete": "Șterge",
+      "existing_bookings": "Rezervări existente",
+      "date": "Data",
+      "start_time": "Ora de început",
+      "end_time": "Ora de sfârșit",
+      "calendar": {
+        "next": "Următorul",
+        "previous": "Anterior",
+        "today": "Astăzi",
+        "month": "Lună",
+        "week": "Săptămână",
+        "day": "Zi"
+      }
+    },
+    "stats": {
+      "title": "Statistici",
+      "total_bookings": "Total Rezervări",
+      "external_bookings": "Rezervări Externe",
+      "user_bookings": "Rezervări Utilizatori",
+      "avg_duration": "Durată Medie (min)",
+      "by_hour": "Rezervări pe Oră",
+      "by_day": "Rezervări pe Zi",
+      "bookings_count": "Număr Rezervări"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Profil",
+    "ACCOUNT_INFO": "Informații Cont",
+    "NAME": "Nume",
+    "EMAIL": "Email",
+    "LOCATION": "Locație",
+    "JOINED_GAMES": "Meciuri la care participi",
+    "NO_GAMES": "Nu participi la niciun meci încă",
+    "LOADING": "Se încarcă...",
+    "NOT_LOGGED_IN": "Te rugăm să te autentifici pentru a-ți vedea profilul"
+  },
+  "available_games": "Meciuri Disponibile",
+  "view_all_games": "Vezi Toate Meciurile",
+  "loading": "Se încarcă...",
+  "no_available_games": "Nu există meciuri cu locuri disponibile momentan",
+  "app_name": "Teren",
+  "all_rights_reserved": "Toate drepturile rezervate"
+}

@@ -1,0 +1,212 @@
+{
+  "welcome": "Welcome to Teren",
+  "find_games": "Find Games",
+  "create_game": "Create Game",
+  "join_game": "Join Game",
+  "venues": "Venues",
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+  "language": "Language",
+  "admin": "Venue Management",
+  "home": "Home",
+  "games": "Games",
+  "create": "Create",
+  "profile": {
+    "joined_games": "Joined Games",
+    "no_joined_games": "No joined games yet.",
+    "loading_games": "Loading games...",
+    "error_fetch_games": "Failed to fetch games",
+    "error_loading_games": "Error loading games: {{error}}",
+    "error": "Error",
+    "login_required": "Login required to view profile."
+  },
+  "management": "Management",
+  "hero": {
+    "title": "Play Football, Find Matches, Create Teams!",
+    "subtitle": "Discover football matches near you in Craiova. Join or create your own match!"
+  },
+  "how_it_works": {
+    "title": "How It Works?",
+    "step1": {
+      "title": "Find Matches",
+      "description": "See a list of available matches in your area. Filter by date, location, or skill level."
+    },
+    "step2": {
+      "title": "Join or Create",
+      "description": "Join an existing match or create your own event and invite players."
+    },
+    "step3": {
+      "title": "Play!",
+      "description": "Show up at the venue on the scheduled date and time and enjoy the game."
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "username": "Username",
+    "city": "City",
+    "login_success": "Logged in successfully!",
+    "signup_success": "Account created successfully!",
+    "sign_up": "Sign up",
+    "dont_have_account": "Don't have an account?"
+  },
+  "game": {
+    "create": {
+      "title": "Create Game",
+      "success": "Game created successfully!",
+      "success_message": "Your game has been added. You can see it in the games list.",
+      "view_games": "View Games"
+    },
+    "edit": {
+      "title": "Edit Game",
+      "success": "Game updated successfully!",
+      "permission_error": "You don't have permission to edit this game.",
+      "error": "Failed to update game",
+      "saving": "Saving...",
+      "save_changes": "Save Changes"
+    },
+    "details": {
+      "join": "Join",
+      "leave": "Leave",
+      "login_to_join": "Log in to join",
+      "map_placeholder": "Map of the venue will appear here.",
+      "not_found": "Game not found",
+      "back_to_games": "Back to Games",
+      "processing": "Processing...",
+      "joined": "Successfully joined the game!",
+      "left": "Successfully left the game!",
+      "deleted": "Game deleted successfully!",
+      "delete_confirmation": "Are you sure you want to delete this game?",
+      "error": "Error",
+      "players": "Players",
+      "no_players": "No players have joined yet",
+      "edit_game": "Edit Game",
+      "delete_game": "Delete Game",
+      "comments_title": "Comments",
+      "write_a_comment": "Write a comment...",
+      "post_comment": "Post",
+      "posting": "Posting...",
+      "no_comments": "No comments yet.",
+      "error_fetch_comments": "Failed to fetch comments",
+      "join_to_comment": "Join the game to leave a comment."
+    },
+    "form": {
+      "date": "Date",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "max_players": "Max Players",
+      "pre_filled_players": "Pre-filled Players",
+      "pre_filled_players_help": "Number of players who will participate but don’t have accounts",
+      "skill_level": "Skill Level",
+      "select_skill": "Select skill level",
+      "select_venue": "Select a venue",
+      "notes": "Notes (optional)"
+    }
+  },
+  "venue": {
+    "management": {
+      "title": "Venue Management",
+      "add": "Add New Venue",
+      "edit": "Edit Venue",
+      "name": "Name",
+      "address": "Address",
+      "location": "Location",
+      "description": "Description",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website",
+      "surface_type": "Surface Type",
+      "select_surface": "Select surface type",
+      "required_field": "This field is required",
+      "price": "Price per Hour",
+      "currency": "Currency",
+      "surface": {
+        "grass": "Grass",
+        "artificial": "Artificial Turf",
+        "concrete": "Concrete"
+      },
+      "size": "Size",
+      "select_size": "Select size",
+      "size_options": {
+        "full": "Full Size",
+        "half": "Half Size"
+      },
+      "facilities": "Facilities",
+      "facility": {
+        "parking": "Parking",
+        "showers": "Showers",
+        "changing_rooms": "Changing Rooms",
+        "lights": "Lights",
+        "seating": "Seating"
+      },
+      "save": "Save",
+      "cancel": "Cancel",
+      "loading": "Loading...",
+      "error": "Error",
+      "error_fetch": "Failed to fetch venues",
+      "error_save": "Failed to save venue",
+      "error_delete": "Failed to delete venue",
+      "update_success": "Venue updated!",
+      "add_success": "Venue added!",
+      "delete_success": "Venue deleted!",
+      "delete_confirmation": "Are you sure you want to delete this venue?"
+    },
+    "booking": {
+      "book": "Book",
+      "edit": "Edit Booking",
+      "duration": "Duration (minutes)",
+      "hour": "hour",
+      "hours": "hours",
+      "save": "Save",
+      "cancel": "Cancel",
+      "booked": "Booked",
+      "delete": "Delete",
+      "existing_bookings": "Existing Bookings",
+      "external": "External",
+      "date": "Date",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "calendar": {
+        "next": "Next",
+        "previous": "Previous",
+        "today": "Today",
+        "month": "Month",
+        "week": "Week",
+        "day": "Day"
+      }
+    },
+    "stats": {
+      "title": "Statistics",
+      "total_bookings": "Total Bookings",
+      "external_bookings": "External Bookings",
+      "user_bookings": "User Bookings",
+      "avg_duration": "Average Duration (min)",
+      "by_hour": "Bookings by Hour",
+      "by_day": "Bookings by Day",
+      "bookings_count": "Number of Bookings"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Profile",
+    "ACCOUNT_INFO": "Account Information",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "LOCATION": "Location",
+    "JOINED_GAMES": "Joined Games",
+    "NO_GAMES": "No games joined yet",
+    "LOADING": "Loading...",
+    "NOT_LOGGED_IN": "Please log in to access your profile"
+  },
+  "available_games": "Available Games",
+  "view_all_games": "View All Games",
+  "loading": "Loading...",
+  "no_available_games": "No games with available spots at the moment",
+  "app_name": "Teren",
+  "all_rights_reserved": "All rights reserved"
+}

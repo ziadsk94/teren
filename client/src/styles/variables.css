@@ -1,0 +1,13 @@
+:root {
+  --primary: #1db954;
+  --dark: #121212;
+  --dark-soft: #1c1c1e;
+  --light-bg: #f9f9f9;
+  --accent: #ff3b30;
+  --gray-light: #e5e5ea;
+  --gray-mid: #a1a1aa;
+  --gray-dark: #3a3a3c;
+
+  --font-heading: "Poppins", "Space Grotesk", sans-serif;
+  --font-body: "Inter", "Roboto", sans-serif;
+}
