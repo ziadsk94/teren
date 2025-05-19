@@ -4,6 +4,8 @@ import { MapPin, Users, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-hot-toast";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Profile = () => {
   const [user, setUser] = useState(null);
   const [userGames, setUserGames] = useState([]);
@@ -24,7 +26,7 @@ const Profile = () => {
     if (token) {
       console.log("Profile page - Token found, attempting to fetch games...");
       // Fetch user's games
-      fetch("/api/users/me/games", {
+      fetch(`${API_URL}/api/users/me/games`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

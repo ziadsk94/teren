@@ -13,11 +13,12 @@ const Venues = () => {
   const user = localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
     : null;
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     console.log("Fetching venues...");
     setLoading(true);
-    fetch("/api/venues", {
+    fetch(`${API_URL}/api/venues`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -36,7 +37,7 @@ const Venues = () => {
         setError(err.message);
         setLoading(false);
       });
-  }, [t, token]);
+  }, [t, token, API_URL]);
 
   return (
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "2rem 1rem" }}>

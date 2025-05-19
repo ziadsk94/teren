@@ -17,8 +17,10 @@ const Home = () => {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
-    fetch("/api/games")
+    fetch(`${API_URL}/api/games`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch games");
         return res.json();

@@ -37,12 +37,14 @@ const CreateGame = ({ language = "ro" }) => {
   const [venues, setVenues] = useState([]);
   const [loadingVenues, setLoadingVenues] = useState(true);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       navigate("/login");
     }
     // Fetch venues
-    fetch("/api/venues")
+    fetch(`${API_URL}/api/venues`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch venues");
         return res.json();
@@ -114,7 +116,7 @@ const CreateGame = ({ language = "ro" }) => {
     setLoading(true);
     setError(null);
     const token = localStorage.getItem("token");
-    fetch("/api/games", {
+    fetch(`${API_URL}/api/games`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -137,7 +139,7 @@ const CreateGame = ({ language = "ro" }) => {
       })
       .then((data) => {
         // Join the game after creation
-        return fetch(`/api/games/${data._id}/join`, {
+        return fetch(`${API_URL}/api/games/${data._id}/join`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

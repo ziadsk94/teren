@@ -57,6 +57,8 @@ const EditGame = () => {
     ? JSON.parse(localStorage.getItem("user"))
     : null;
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   // Effect to fetch initial data
   useEffect(() => {
     if (!token) {
@@ -72,7 +74,7 @@ const EditGame = () => {
 
     // Fetch venues
     console.log("Fetching venues...");
-    fetch("/api/venues")
+    fetch(`${API_URL}/api/venues`)
       .then((res) => {
         if (!res.ok) throw new Error(t("venue.management.error_fetch"));
         return res.json();
@@ -91,7 +93,7 @@ const EditGame = () => {
 
     // Fetch game data
     console.log(`Fetching game ${id}...`);
-    fetch(`/api/games/${id}`, {
+    fetch(`${API_URL}/api/games/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -195,7 +197,7 @@ const EditGame = () => {
     setSubmitting(true);
     setErrorGame(null);
     try {
-      const res = await fetch(`/api/games/${id}`, {
+      const res = await fetch(`${API_URL}/api/games/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

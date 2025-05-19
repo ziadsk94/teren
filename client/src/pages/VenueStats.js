@@ -21,6 +21,8 @@ import {
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const VenueStats = ({ language = "ro" }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -59,7 +61,7 @@ const VenueStats = ({ language = "ro" }) => {
 
   const fetchVenue = async () => {
     try {
-      const res = await fetch(`/api/venues/${id}`, {
+      const res = await fetch(`${API_URL}/api/venues/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -77,7 +79,7 @@ const VenueStats = ({ language = "ro" }) => {
   const fetchStats = async () => {
     try {
       const res = await fetch(
-        `/api/venues/${id}/statistics?startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`,
+        `${API_URL}/api/venues/${id}/statistics?startDate=${dateRange.startDate}&endDate=${dateRange.endDate}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -95,7 +97,7 @@ const VenueStats = ({ language = "ro" }) => {
   const fetchHistory = async () => {
     try {
       const res = await fetch(
-        `/api/venues/${id}/history?startDate=${dateRange.startDate}&endDate=${dateRange.endDate}&page=${currentPage}`,
+        `${API_URL}/api/venues/${id}/history?startDate=${dateRange.startDate}&endDate=${dateRange.endDate}&page=${currentPage}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

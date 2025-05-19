@@ -11,6 +11,8 @@ const SignUp = ({ language = "ro" }) => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -19,7 +21,7 @@ const SignUp = ({ language = "ro" }) => {
     setError(null);
     setSuccess(false);
     try {
-      const res = await fetch("/api/users/register", {
+      const res = await fetch(`${API_URL}/api/users/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

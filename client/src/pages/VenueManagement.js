@@ -14,6 +14,8 @@ import {
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const VenueManagement = () => {
   const navigate = useNavigate();
   const [venues, setVenues] = useState([]);
@@ -44,7 +46,7 @@ const VenueManagement = () => {
   const fetchVenues = useCallback(async () => {
     try {
       console.log("Fetching venues with token:", token);
-      const res = await fetch("/api/venues", {
+      const res = await fetch(`${API_URL}/api/venues`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -98,8 +100,8 @@ const VenueManagement = () => {
     e.preventDefault();
     try {
       const url = editingVenue
-        ? `/api/venues/${editingVenue._id}`
-        : "/api/venues";
+        ? `${API_URL}/api/venues/${editingVenue._id}`
+        : `${API_URL}/api/venues`;
       const method = editingVenue ? "PUT" : "POST";
 
       const formData = {
@@ -111,7 +113,7 @@ const VenueManagement = () => {
       };
 
       console.log("Submitting venue data:", formData);
-      const res = await fetch(url, {
+      const res = await fetch(url.replace("/api", `${API_URL}/api`), {
         method,
         headers: {
           "Content-Type": "application/json",
@@ -162,7 +164,7 @@ const VenueManagement = () => {
     if (!window.confirm(t("venue.management.delete_confirmation"))) return;
 
     try {
-      const res = await fetch(`/api/venues/${venueId}`, {
+      const res = await fetch(`${API_URL}/api/venues/${venueId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

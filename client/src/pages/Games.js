@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import toast from "react-hot-toast";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Games = ({ language = "ro" }) => {
   const navigate = useNavigate();
   const [games, setGames] = useState([]);
@@ -21,7 +23,7 @@ const Games = ({ language = "ro" }) => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch("/api/games");
+        const res = await fetch(`${API_URL}/api/games`);
         if (!res.ok) {
           const errorData = await res.json();
           throw new Error(errorData.message || "Failed to fetch games");

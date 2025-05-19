@@ -4,6 +4,8 @@ import { MapPin, Users, Calendar, Info, User } from "lucide-react";
 import toast from "react-hot-toast";
 import { useTranslation } from "react-i18next";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const GameDetails = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
@@ -24,7 +26,7 @@ const GameDetails = () => {
     const fetchGameDetails = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`/api/games/${id}`);
+        const res = await fetch(`${API_URL}/api/games/${id}`);
         if (!res.ok) {
           const errorData = await res.json();
           throw new Error(errorData.message || "Failed to fetch game");
@@ -64,7 +66,7 @@ const GameDetails = () => {
     setJoinLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/games/${id}/join`, {
+      const res = await fetch(`${API_URL}/api/games/${id}/join`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +94,7 @@ const GameDetails = () => {
     setJoinLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/games/${id}/leave`, {
+      const res = await fetch(`${API_URL}/api/games/${id}/leave`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -147,7 +149,7 @@ const GameDetails = () => {
     setJoinLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/games/${id}`, {
+      const res = await fetch(`${API_URL}/api/games/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

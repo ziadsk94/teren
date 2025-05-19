@@ -43,10 +43,11 @@ const VenueBooking = () => {
     ? JSON.parse(localStorage.getItem("user"))
     : null;
   const [showEditModal, setShowEditModal] = useState(false);
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const fetchVenue = async () => {
     try {
-      const res = await fetch(`/api/venues/${id}`, {
+      const res = await fetch(`${API_URL}/api/venues/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -174,7 +175,7 @@ const VenueBooking = () => {
     }
 
     try {
-      const res = await fetch(`/api/venues/${id}/bookings`, {
+      const res = await fetch(`${API_URL}/api/venues/${id}/bookings`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -212,12 +213,15 @@ const VenueBooking = () => {
     }
 
     try {
-      const res = await fetch(`/api/venues/${id}/bookings/${bookingId}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await fetch(
+        `${API_URL}/api/venues/${id}/bookings/${bookingId}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (!res.ok) {
         const data = await res.json();
@@ -280,7 +284,7 @@ const VenueBooking = () => {
 
     try {
       const res = await fetch(
-        `/api/venues/${id}/bookings/${editingBooking._id}`,
+        `${API_URL}/api/venues/${id}/bookings/${editingBooking._id}`,
         {
           method: "PUT",
           headers: {
