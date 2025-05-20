@@ -69,7 +69,20 @@ const Venues = () => {
           className="card"
           style={{ textAlign: "center", color: "var(--accent-red)" }}
         >
-          {error}
+          {!token ? (
+            <>
+              <h2>{t("auth.login_required")}</h2>
+              <Link
+                to="/login"
+                className="ui-btn primary"
+                style={{ marginTop: 16 }}
+              >
+                {t("auth.login")}
+              </Link>
+            </>
+          ) : (
+            error
+          )}
         </div>
       ) : (
         <div style={{ display: "grid", gap: "1.5rem" }}>

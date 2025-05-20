@@ -52,7 +52,8 @@
     "login_success": "Autentificare reușită!",
     "signup_success": "Cont creat cu succes!",
     "sign_up": "Înregistrare",
-    "dont_have_account": "Nu ai un cont?"
+    "dont_have_account": "Nu ai un cont?",
+    "login_required": "Te rugăm să te autentifici pentru a vedea terenurile."
   },
   "game": {
     "create": {
