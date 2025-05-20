@@ -52,61 +52,60 @@ const SignUp = () => {
   }
 
   return (
-    <main style={{ maxWidth: 400, margin: "2rem auto" }}>
-      <h1 className="ui-heading" style={{ marginBottom: 24 }}>
-        {t("auth.signup")}
-      </h1>
-      <form
-        className="card"
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column", gap: 16 }}
-      >
-        <input
-          name="name"
-          placeholder={t("auth.name")}
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="username"
-          placeholder={t("auth.username")}
-          value={form.username}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="email"
-          type="email"
-          placeholder={t("auth.email")}
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="password"
-          type="password"
-          placeholder={t("auth.password")}
-          value={form.password}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="location"
-          placeholder={t("auth.city")}
-          value={form.location}
-          onChange={handleChange}
-        />
-        {error && (
-          <div className="small" style={{ color: "var(--accent-red)" }}>
-            {error}
-          </div>
-        )}
-        <button className="ui-btn primary" type="submit">
-          {t("auth.signup")}
-        </button>
-      </form>
-    </main>
+    <div className="auth-page">
+      <div className="auth-container">
+        <h1>{t("auth.signup")}</h1>
+        <form
+          onSubmit={handleSubmit}
+          style={{ display: "flex", flexDirection: "column", gap: 16 }}
+        >
+          <input
+            name="name"
+            placeholder={t("auth.name")}
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="username"
+            placeholder={t("auth.username")}
+            value={form.username}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder={t("auth.email")}
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="password"
+            type="password"
+            placeholder={t("auth.password")}
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="location"
+            placeholder={t("auth.city")}
+            value={form.location}
+            onChange={handleChange}
+          />
+          {error && (
+            <div className="small" style={{ color: "var(--accent-red)" }}>
+              {error}
+            </div>
+          )}
+          <button className="ui-btn primary" type="submit">
+            {t("auth.signup")}
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 
