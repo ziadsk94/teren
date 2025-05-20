@@ -37,14 +37,16 @@ const Header = ({ isManagement }) => {
           <img src={logo} alt="Logo" />
         </Link>
 
-        {/* Mobile menu button - always show hamburger */}
-        <button
-          className="mobile-menu-button"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <Menu size={24} />
-        </button>
+        {/* Mobile menu button - hidden when menu is open */}
+        {!isMenuOpen && (
+          <button
+            className="mobile-menu-button"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <Menu size={24} />
+          </button>
+        )}
 
         {/* Navigation */}
         <nav className={`header-nav ${isMenuOpen ? "open" : ""}`}>
