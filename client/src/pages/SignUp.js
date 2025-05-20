@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-const SignUp = ({ language = "ro" }) => {
+const SignUp = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -10,6 +12,7 @@ const SignUp = ({ language = "ro" }) => {
   });
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const { t } = useTranslation();
 
   const API_URL = process.env.REACT_APP_API_URL;
 
@@ -40,12 +43,10 @@ const SignUp = ({ language = "ro" }) => {
         className="card"
         style={{ maxWidth: 400, margin: "2rem auto", textAlign: "center" }}
       >
-        <h2>
-          {language === "ro" ? "Cont creat cu succes!" : "Account created!"}
-        </h2>
-        <a href="/login" className="ui-btn primary" style={{ marginTop: 16 }}>
-          {language === "ro" ? "Autentifică-te" : "Log in"}
-        </a>
+        <h2>{t("auth.signup_success")}</h2>
+        <Link to="/login" className="ui-btn primary" style={{ marginTop: 16 }}>
+          {t("auth.login")}
+        </Link>
       </div>
     );
   }
@@ -53,7 +54,7 @@ const SignUp = ({ language = "ro" }) => {
   return (
     <main style={{ maxWidth: 400, margin: "2rem auto" }}>
       <h1 className="ui-heading" style={{ marginBottom: 24 }}>
-        {language === "ro" ? "Înregistrare" : "Sign Up"}
+        {t("auth.signup")}
       </h1>
       <form
         className="card"
@@ -62,14 +63,14 @@ const SignUp = ({ language = "ro" }) => {
       >
         <input
           name="name"
-          placeholder={language === "ro" ? "Nume" : "Name"}
+          placeholder={t("auth.name")}
           value={form.name}
           onChange={handleChange}
           required
         />
         <input
           name="username"
-          placeholder={language === "ro" ? "Nume de utilizator" : "Username"}
+          placeholder={t("auth.username")}
           value={form.username}
           onChange={handleChange}
           required
@@ -77,7 +78,7 @@ const SignUp = ({ language = "ro" }) => {
         <input
           name="email"
           type="email"
-          placeholder="Email"
+          placeholder={t("auth.email")}
           value={form.email}
           onChange={handleChange}
           required
@@ -85,14 +86,14 @@ const SignUp = ({ language = "ro" }) => {
         <input
           name="password"
           type="password"
-          placeholder={language === "ro" ? "Parolă" : "Password"}
+          placeholder={t("auth.password")}
           value={form.password}
           onChange={handleChange}
           required
         />
         <input
           name="location"
-          placeholder={language === "ro" ? "Oraș" : "City"}
+          placeholder={t("auth.city")}
           value={form.location}
           onChange={handleChange}
         />
@@ -102,7 +103,7 @@ const SignUp = ({ language = "ro" }) => {
           </div>
         )}
         <button className="ui-btn primary" type="submit">
-          {language === "ro" ? "Înregistrează-te" : "Sign Up"}
+          {t("auth.signup")}
         </button>
       </form>
     </main>
