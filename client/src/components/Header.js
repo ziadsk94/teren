@@ -37,13 +37,13 @@ const Header = ({ isManagement }) => {
           <img src={logo} alt="Logo" />
         </Link>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - always show hamburger */}
         <button
           className="mobile-menu-button"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
 
         {/* Navigation */}
