@@ -110,6 +110,7 @@ const VenueManagement = () => {
           lat: form.coordinates.lat ? Number(form.coordinates.lat) : undefined,
           lng: form.coordinates.lng ? Number(form.coordinates.lng) : undefined,
         },
+        price: form.price ? Number(form.price) : undefined,
       };
 
       console.log("Submitting venue data:", formData);
