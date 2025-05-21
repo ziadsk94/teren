@@ -27,9 +27,11 @@ const Home = () => {
       })
       .then((data) => {
         // Filter games that have available spots
-        const availableGames = data.filter(
-          (game) => game.players.length < game.maxPlayers
-        );
+        const availableGames = data.filter((game) => {
+          const gameEndTime = new Date(`${game.date}T${game.endTime}`);
+          const now = new Date();
+          return gameEndTime > now && game.players.length < game.maxPlayers;
+        });
         setGames(availableGames);
         setLoading(false);
       })

@@ -50,7 +50,10 @@ const Games = ({ language = "ro" }) => {
 
   // Filtered games
   const filteredGames = games.filter((game) => {
+    const gameEndTime = new Date(`${game.date}T${game.endTime}`);
+    const now = new Date();
     return (
+      gameEndTime > now &&
       (!date || game.date === date) &&
       (!location || (game.venue?.location || game.location) === location) &&
       (!skill || (game.skillLevel || game.skill) === skill)
