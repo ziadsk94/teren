@@ -209,5 +209,8 @@
   "loading": "Se încarcă...",
   "no_available_games": "Nu există meciuri cu locuri disponibile momentan",
   "app_name": "Teren",
-  "all_rights_reserved": "Toate drepturile rezervate"
+  "all_rights_reserved": "Toate drepturile rezervate",
+  "all_locations": "Toate locațiile",
+  "all_levels": "Toate nivelurile",
+  "no_games_match_filter": "Nu există meciuri care să corespundă filtrului."
 }

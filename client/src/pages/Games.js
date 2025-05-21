@@ -72,9 +72,7 @@ const Games = ({ language = "ro" }) => {
           marginBottom: "2rem",
         }}
       >
-        <h1 className="ui-heading">
-          {language === "ro" ? "Meciuri disponibile" : "Available Games"}
-        </h1>
+        <h1 className="ui-heading">{t("available_games")}</h1>
         <button
           className="ui-btn primary"
           onClick={() => {
@@ -86,7 +84,7 @@ const Games = ({ language = "ro" }) => {
           style={{ display: "flex", alignItems: "center", gap: 8 }}
         >
           <PlusCircle size={18} />
-          {language === "ro" ? "Creează Meci" : "Create Game"}
+          {t("create_game")}
         </button>
       </div>
 
@@ -135,9 +133,7 @@ const Games = ({ language = "ro" }) => {
               paddingRight: "2.5rem",
             }}
           >
-            <option value="">
-              {language === "ro" ? "Toate locațiile" : "All locations"}
-            </option>
+            <option value="">{t("all_locations")}</option>
             {locations.map((loc) => (
               <option key={loc} value={loc}>
                 {loc}
@@ -163,9 +159,7 @@ const Games = ({ language = "ro" }) => {
               paddingRight: "2.5rem",
             }}
           >
-            <option value="">
-              {language === "ro" ? "Toate nivelurile" : "All levels"}
-            </option>
+            <option value="">{t("all_levels")}</option>
             {skills.map((s) => (
               <option key={s} value={s}>
                 {s}
@@ -200,9 +194,7 @@ const Games = ({ language = "ro" }) => {
               className="card"
               style={{ textAlign: "center", color: "var(--mid-gray)" }}
             >
-              {language === "ro"
-                ? "Nu există meciuri care să corespundă filtrului."
-                : "No games match your filter."}
+              {t("no_games_match_filter")}
             </div>
           ) : (
             filteredGames.map((game) => (

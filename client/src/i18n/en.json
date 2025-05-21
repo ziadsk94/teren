@@ -209,5 +209,8 @@
   "loading": "Loading...",
   "no_available_games": "No games with available spots at the moment",
   "app_name": "Teren",
-  "all_rights_reserved": "All rights reserved"
+  "all_rights_reserved": "All rights reserved",
+  "all_locations": "All locations",
+  "all_levels": "All levels",
+  "no_games_match_filter": "No games match your filter."
 }
